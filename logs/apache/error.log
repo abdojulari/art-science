@@ -1,0 +1,11 @@
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using Abdulkabirs-MacBook-Pro.local. Set the 'ServerName' directive globally to suppress this message
+[Tue Aug 24 10:16:36.144016 2021] [mpm_event:notice] [pid 13861:tid 4549660160] AH00489: Apache/2.4.43 (Unix) configured -- resuming normal operations
+[Tue Aug 24 10:16:36.144745 2021] [core:notice] [pid 13861:tid 4549660160] AH00094: Command line: '/Users/oj/Library/Application Support/Local/lightning-services/apache-2.4.43+6/bin/darwin/bin/httpd -D FOREGROUND -f /Users/oj/Library/Application Support/Local/run/wXGS2BRtZ/conf/apache/apache2.conf'
+[Tue Aug 24 10:17:47.989090 2021] [mpm_event:notice] [pid 13861:tid 4549660160] AH00491: caught SIGTERM, shutting down
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using Abdulkabirs-MacBook-Pro.local. Set the 'ServerName' directive globally to suppress this message
+[Tue Aug 24 10:17:50.295341 2021] [mpm_event:notice] [pid 14739:tid 4608040448] AH00489: Apache/2.4.43 (Unix) configured -- resuming normal operations
+[Tue Aug 24 10:17:50.295840 2021] [core:notice] [pid 14739:tid 4608040448] AH00094: Command line: '/Users/oj/Library/Application Support/Local/lightning-services/apache-2.4.43+6/bin/darwin/bin/httpd -D FOREGROUND -f /Users/oj/Library/Application Support/Local/run/wXGS2BRtZ/conf/apache/apache2.conf'
+[Wed Aug 25 12:00:44.718315 2021] [mpm_event:notice] [pid 14739:tid 4608040448] AH00491: caught SIGTERM, shutting down
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using Abdulkabirs-MacBook-Pro.local. Set the 'ServerName' directive globally to suppress this message
+[Wed Aug 25 12:17:21.923550 2021] [mpm_event:notice] [pid 8913:tid 4618415616] AH00489: Apache/2.4.43 (Unix) configured -- resuming normal operations
+[Wed Aug 25 12:17:21.925213 2021] [core:notice] [pid 8913:tid 4618415616] AH00094: Command line: '/Users/oj/Library/Application Support/Local/lightning-services/apache-2.4.43+6/bin/darwin/bin/httpd -D FOREGROUND -f /Users/oj/Library/Application Support/Local/run/wXGS2BRtZ/conf/apache/apache2.conf'
