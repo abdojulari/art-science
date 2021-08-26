@@ -25,7 +25,7 @@ the_post();
 </div><!-- /#post-<?php the_ID(); ?> -->
 <section class="row justify-content-center justify-content-md-center my-5 inspiration">
 	<div class="row justify-content-center mb-5">
-		<h2 class="text-center inspiration">Inspiration</h2>
+		<h1 class="text-center inspiration">Inspiration</h1>
 	 	<div class="horizontal-ruler" ></div>
 	</div>
 	 
@@ -42,7 +42,7 @@ the_post();
 			<div class="w-100 m-2 p-2 post-thumbnail">
 			<?php
 				if ( has_post_thumbnail() ) { ?>
-						<div class="position-relative"> <?php the_post_thumbnail(array(390, 250)); ?>
+						<div class="position-relative w-100"> <?php the_post_thumbnail('large',array( 'loading' => 'eager' )); ?>
 						<div class="position-absolute  translate-middle vertical-ruler px-3 pt-4 align-bottom">INSIGHT</div>
 					    </div>
 						
@@ -65,21 +65,21 @@ the_post();
 					<img class="img-fluid w-100"  src="<?php  the_field('alternating_calls_to_action'); ?>" alt="alternating_calls_to_action" />
 				</div>           
 			<?php endif; ?>
-			<div class="col-4 d-lg-block d-none position-relative ">	
-				<div class=" position-absolute top-50 start-0 translate-middle" style="">
-					<div class="position-absolute w-100 top-0 start-0 horizontal-ruler-no-width" ></div>
-					<p class="bg-white p-4 mt-4 text-end fs-4 text"><?php the_field('calls_to_action_text'); ?></p>
+			<div class="col-4 d-lg-block d-none ">	
+				<div class="py-5" style="margin-left:-130px;padding:25px;">
+					<div class="w-100 top-0 start-0 horizontal-ruler-no-width" ></div>
+					<p class="bg-white p-4 mt-4 text-end fs-2 text"><?php the_field('calls_to_action_text'); ?></p>
 					<a href="#" class="btn btn-primary round-0 float-end">VIEW OUR SERVICES</a>
 				</div>
 			</div>
 		</div>
 		<div class="row my-5 px-5">
-		<div class="col-lg-4 d-lg-block d-none position-relative" style="padding: 25px; ">
-				<div class="w-100 position-absolute top-50 start-100 translate-middle">
-				<div class="position-absolute w-100 top-0 start-0 horizontal-ruler-no-width"></div>
-				<p class="bg-white p-4 mt-4 fs-4 text"><?php  the_field('action_section_text'); ?></p> 
-				<a href="#" class="btn btn-primary round-0">LEARN MORE</a>
-			</div>
+			<div class="col-lg-4 d-lg-block d-none" style="margin-right:-130px; padding:25px;z-index:2 ">
+				<div class=" py-5" >
+					<div class="w-100 top-0 start-0 horizontal-ruler-no-width"></div>
+					<p class="bg-white p-4 mt-4 fs-3 text"><?php  the_field('action_section_text'); ?></p> 
+					<a href="#" class="btn btn-primary round-0">LEARN MORE</a>
+				</div>
 			</div>
 		<?php  if(get_field('action_section_image')): ?> 
 			<div class="col-lg-8 d-lg-block d-none">

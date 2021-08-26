@@ -101,7 +101,19 @@ $link-decoration: none;
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utililies.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
 
-
+body {
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 /**
  * General
  */
@@ -188,7 +200,7 @@ body.admin-bar {
 	border-bottom: 6px solid #ffa500; z-index:3
 }
 .horizontal-ruler{
-	border-bottom: 6px solid #ffa500; width: 160px;
+	border-bottom: 6px solid #ffa500; width: 200px;
 }
 
 /** button custom **/
