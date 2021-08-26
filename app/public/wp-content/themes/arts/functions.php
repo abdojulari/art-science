@@ -484,6 +484,27 @@ if ( is_readable( $custom_walker_footer ) ) {
  add_theme_support( 'post-thumbnails' );
 
  add_theme_support( 'custom-logo' );
+
+ /***
+  * 
+    Re-order post desc  
+
+  */
+
+  //function to modify default WordPress query
+	function wpb_custom_query( $query ) {
+ 
+	// Make sure we only modify the main query on the homepage  
+		if( $query->is_main_query() && ! is_admin() && $query->is_home() ) {
+			// Set parameters to modify the query
+			$query->set( 'orderby', 'date' );
+			$query->set( 'order', 'DESC' );
+			$query->set( 'suppress_filters', 'true' );
+		}
+	}
+	 
+	// Hook our custom query function to the pre_get_posts 
+	add_action( 'pre_get_posts', 'wpb_custom_query' );
 /**
  * Loading All CSS Stylesheets and Javascript Files.
  *

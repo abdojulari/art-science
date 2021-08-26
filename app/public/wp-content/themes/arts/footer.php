@@ -16,7 +16,7 @@
 		<style>
           .watermark-container {
 			background-image: url(<?php echo get_template_directory_uri(); ?>/images/watermark-norr.svg); background-repeat: no-repeat;
-			border-top: 2px solid #ffa500;
+			border-top: 3px solid #ffa500;
 		  }
 		  
 		</style>
@@ -25,12 +25,17 @@
 			<?php  if(get_field('footer_calls_to_action')): ?> 
 					<img class="w-100"  style="height: 22.5em" src="<?php  the_field('footer_calls_to_action'); ?>" alt="footer" />
 			<?php endif; ?>
+			
 			<div class="row " style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-					<div class="col bg-white m-3 p-3 " >
+					
+					<div class="col bg-white bg-opacity-75 m-5 p-3 " >
+						<div class="horizontal-ruler-no-width w-50" style="margin-left:-30px;"></div>
 						<p class="footer-font"><?php  the_field('contacts'); ?></p>
 						<a href="#" class="btn btn-primary rounded-0 mt-2">CONTACT <span>&#62;</span></a>
 				   </div>
-					<div class="col  bg-white m-3 p-3 ">
+				   
+					<div class="col  bg-white bg-opacity-75 m-5 p-3 ">
+						<div class="horizontal-ruler-no-width w-50" style="margin-left:-30px;"></div>
 						<p class="footer-font"><?php  the_field('join_us'); ?></p>
 						<a href="#" class="btn btn-primary rounded-0 mt-2">JOIN US <span>&#62;</span></a>
 					</div>
@@ -43,7 +48,7 @@
 						<img  src="<?php echo get_template_directory_uri(); ?>/images/logo-norr.svg" alt="">	
 					</div>
 					<div class="col  py-4 px-2 align-self-end ">
-						<ul class="justify-content-end d-flex flex-row">
+						<ul class="list-unstyled justify-content-end d-flex flex-row">
 							<li><a class="mx-2" href="#" ><img  src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook.svg" alt="facebook"></a></li>
 							<li><a class="mx-2" href="#" ><img  src="<?php echo get_template_directory_uri(); ?>/images/icon-twitter.svg" alt="twitter"></a></li>
 							<li><a class="mx-2" href="#" ><img  src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.svg" alt="instagram"></a></li>
@@ -94,7 +99,7 @@
 			<div class="container-fluid copy-right no-gutter">
 				<div class="row justify-content-end">
 					<div class="offset-md-8 col-md-4">
-						<p class="text-right pt-2"><?php printf( esc_html__( '&copy; %1$s %2$s | Website by Art & Science', 'arts-and-science-theme' ), date_i18n( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>		
+						<p class="pl-5 text-end pt-2"><?php printf( esc_html__( '&copy; %1$s %2$s | Website by Art & Science', 'arts-and-science-theme' ), date_i18n( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>		
 					</div>
 				</div>
 			</div>

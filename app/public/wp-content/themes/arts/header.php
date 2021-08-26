@@ -23,8 +23,8 @@
     <header class="bg-gray" style="margin-top:-10px;git ">
         <div class="container pt-2">
             <div class="my-2 ml-auto">
-                    <ul class="d-flex flex-row list-unstyled justify-content-end">
-                        <li class=" px-2">Search</li>
+                    <ul class="header-text d-flex flex-row list-unstyled justify-content-end">
+                        <li class=" px-2">&#128269;<span class="px-1">Search</span></li>
                         <li class=" px-2">Login</li>
                         <li class="">Covid-19 Info</li>
                     </ul>

@@ -23,7 +23,7 @@ the_post();
 		edit_post_link( __( 'Edit', 'arts-and-science-theme' ), '<span class="edit-link">', '</span>' );
 	?>
 </div><!-- /#post-<?php the_ID(); ?> -->
-<section class="row justify-content-center my-5 inspiration">
+<section class="row justify-content-center justify-content-md-center my-5 inspiration">
 	<div class="row justify-content-center mb-5">
 		<h2 class="text-center inspiration">Inspiration</h2>
 	 	<div class="horizontal-ruler" ></div>
@@ -31,18 +31,18 @@ the_post();
 	 
 		<?php 
 		// Define our WP Query Parameters
-		$the_query = new WP_Query( 'posts_per_page=4' ); ?>
+		$query = new WP_Query( 'posts_per_page=4' ); ?>
 		
 		<?php 
 		// Start our WP Query
-		while ($the_query -> have_posts()) : $the_query -> the_post(); 
+		while ($query -> have_posts()) : $query -> the_post(); 
 		// Display the Post Title with Hyperlink
 		?>
 		<div class="col-lg-3 ">
 			<div class="w-100 m-2 p-2 post-thumbnail">
 			<?php
 				if ( has_post_thumbnail() ) { ?>
-						<div class="position-relative"> <?php the_post_thumbnail('full'); ?>
+						<div class="position-relative"> <?php the_post_thumbnail(array(390, 250)); ?>
 						<div class="position-absolute  translate-middle vertical-ruler px-3 pt-4 align-bottom">INSIGHT</div>
 					    </div>
 						
@@ -58,36 +58,36 @@ the_post();
 		?>
 
 </section>
-<section class="row mb-5">
-<div class="row my-5 px-5">
-<?php  if(get_field('alternating_calls_to_action')): ?> 
-    <div class="col-lg-8 d-lg-block d-none">
-		<img class="img-fluid w-100"  src="<?php  the_field('alternating_calls_to_action'); ?>" alt="Hero" />
-	</div>           
-<?php endif; ?>
-    <div class="col-lg-4 d-lg-block d-none position-relative ">	
-        <div class=" position-absolute top-50 start-0 translate-middle" style="">
-			<div class="position-absolute w-100 top-0 start-0 horizontal-ruler-no-width" ></div>
-            <p class="bg-white p-4 mt-4"><?php  the_field('calls_to_action_text'); ?></p>
-			<a href="#" class="btn btn-primary round-0 float-end">VIEW OUR SERVICES</a>
-       </div>
-	</div>
-</div>
-<div class="row my-5 px-5">
-<div class="col-lg-4 d-lg-block d-none position-relative" style="padding: 25px; ">
-        <div class="w-100 position-absolute top-50 start-100 translate-middle">
-		<div class="position-absolute w-100 top-0 start-0 horizontal-ruler-no-width"></div>
-           <p class="bg-white p-4 mt-4"><?php  the_field('action_section_text'); ?></p> 
-		   <a href="#" class="btn btn-primary round-0">LEARN MORE</a>
-       </div>
-	</div>
-<?php  if(get_field('action_section_image')): ?> 
-    <div class="col-lg-8 d-lg-block d-none">
-		<img class="img-fluid w-100"  src="<?php  the_field('action_section_image'); ?>" alt="Hero" />
-	</div>           
-<?php endif; ?>
-    
-</div>
+<section class="row  d-lg-block d-none mb-5 px-5">
+		<div class="row my-5 mb-5 px-5" >
+			<?php  if(get_field('alternating_calls_to_action')): ?> 
+				<div class="col-8 d-lg-block d-none">
+					<img class="img-fluid w-100"  src="<?php  the_field('alternating_calls_to_action'); ?>" alt="alternating_calls_to_action" />
+				</div>           
+			<?php endif; ?>
+			<div class="col-4 d-lg-block d-none position-relative ">	
+				<div class=" position-absolute top-50 start-0 translate-middle" style="">
+					<div class="position-absolute w-100 top-0 start-0 horizontal-ruler-no-width" ></div>
+					<p class="bg-white p-4 mt-4 text-end fs-4 text"><?php the_field('calls_to_action_text'); ?></p>
+					<a href="#" class="btn btn-primary round-0 float-end">VIEW OUR SERVICES</a>
+				</div>
+			</div>
+		</div>
+		<div class="row my-5 px-5">
+		<div class="col-lg-4 d-lg-block d-none position-relative" style="padding: 25px; ">
+				<div class="w-100 position-absolute top-50 start-100 translate-middle">
+				<div class="position-absolute w-100 top-0 start-0 horizontal-ruler-no-width"></div>
+				<p class="bg-white p-4 mt-4 fs-4 text"><?php  the_field('action_section_text'); ?></p> 
+				<a href="#" class="btn btn-primary round-0">LEARN MORE</a>
+			</div>
+			</div>
+		<?php  if(get_field('action_section_image')): ?> 
+			<div class="col-lg-8 d-lg-block d-none">
+				<img class="img-fluid w-100"  src="<?php  the_field('action_section_image'); ?>" alt="Hero" />
+			</div>           
+		<?php endif; ?>
+			
+		</div>
 </section>
 <!--  For mobile screen -->
 <section class="row d-xl-none d-lg-none d-md-block">
@@ -98,9 +98,9 @@ the_post();
 	</div>           
 <?php endif; ?>
     <div class="d-xl-none d-lg-none d-md-block col-md-12">	
-        <div class="" style="">
+        <div class="w-100" style="">
 			<div class="w-100 horizontal-ruler-no-width" ></div>
-            <p class="bg-white py-4 mt-2"><?php  the_field('calls_to_action_text'); ?></p>
+            <p class="bg-white py-4 mt-2 text-end"><?php  the_field('calls_to_action_text'); ?></p>
 			<a href="#" class="btn btn-primary round-0">VIEW OUR SERVICES</a>
        </div>
 	</div>

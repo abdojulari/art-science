@@ -59,6 +59,7 @@ $font-family-base: $font-family-sans-serif;
 
 $link-decoration: none;
 
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -194,8 +195,9 @@ body.admin-bar {
 .btn-primary {
 	background-color: #001E45;
 	border-color:#001E45;
-	padding: 0.53em;
-	font-size:1vw
+	padding: 1.03em;
+	font-size:1vw;
+	border-radius: 0;
 }
 
 .inspiration {
@@ -209,10 +211,18 @@ body.admin-bar {
 
 /*   Header  */
 #wrapper{
+	.header-text {
+		li {
+			border-right: 2px solid $gray-200;
+		padding:5px
+		}
+		li:last-child {border-right: none;}
+	
+	}
 	.hero-text {
 		li {
 			border-right: 2px solid $orange;
-			padding:10px
+			padding:5px
 		}
 		li:last-child {border-right: none;}
 		a {
