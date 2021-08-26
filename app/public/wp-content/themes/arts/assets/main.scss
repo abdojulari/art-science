@@ -119,9 +119,7 @@ body.admin-bar {
 	#header.fixed-top {
 		top: 32px;
 	}
-    #header {
-		background-color: $gray-400;
-	}
+   
 	.edit-link a {
 		color: #fff !important;
 		font-weight: normal !important;
@@ -153,7 +151,7 @@ body.admin-bar {
 }
 
 /* Header */
-
+.bg-gray {background-color: $gray-300 !important};
 #header {
 	.search-form {
 		min-width: 250px;

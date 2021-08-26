@@ -8,7 +8,7 @@
 </head>
 
 <?php
-    $navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-light bg-light' ); // Get custom meta-value.
+    $navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-light bg-gray' ); // Get custom meta-value.
     $navbar_position = get_theme_mod( 'navbar_position', 'static' ); // Get custom meta-value.
 
     $search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
@@ -20,8 +20,8 @@
 
 <a href="#main" class="visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'arts-and-science-theme' ); ?></a>
 <div id="wrapper">
-    <header class="">
-        <div class="container">
+    <header class="bg-gray" style="margin-top:-10px;git ">
+        <div class="container pt-2">
             <div class="my-2 ml-auto">
                     <ul class="d-flex flex-row list-unstyled justify-content-end">
                         <li class=" px-2">Search</li>
