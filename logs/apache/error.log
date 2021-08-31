@@ -9,3 +9,7 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using Abdulkabirs-MacBook-Pro.local. Set the 'ServerName' directive globally to suppress this message
 [Wed Aug 25 12:17:21.923550 2021] [mpm_event:notice] [pid 8913:tid 4618415616] AH00489: Apache/2.4.43 (Unix) configured -- resuming normal operations
 [Wed Aug 25 12:17:21.925213 2021] [core:notice] [pid 8913:tid 4618415616] AH00094: Command line: '/Users/oj/Library/Application Support/Local/lightning-services/apache-2.4.43+6/bin/darwin/bin/httpd -D FOREGROUND -f /Users/oj/Library/Application Support/Local/run/wXGS2BRtZ/conf/apache/apache2.conf'
+[Sat Aug 28 18:16:52.177744 2021] [mpm_event:notice] [pid 8913:tid 4618415616] AH00491: caught SIGTERM, shutting down
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using Abdulkabirs-MacBook-Pro.local. Set the 'ServerName' directive globally to suppress this message
+[Mon Aug 30 11:08:14.410743 2021] [mpm_event:notice] [pid 67174:tid 4558040576] AH00489: Apache/2.4.43 (Unix) configured -- resuming normal operations
+[Mon Aug 30 11:08:14.411609 2021] [core:notice] [pid 67174:tid 4558040576] AH00094: Command line: '/Users/oj/Library/Application Support/Local/lightning-services/apache-2.4.43+6/bin/darwin/bin/httpd -D FOREGROUND -f /Users/oj/Library/Application Support/Local/run/wXGS2BRtZ/conf/apache/apache2.conf'

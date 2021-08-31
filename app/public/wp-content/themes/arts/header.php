@@ -20,13 +20,15 @@
 
 <a href="#main" class="visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'arts-and-science-theme' ); ?></a>
 <div id="wrapper">
-    <header class="bg-gray" style="margin-top:-10px;git ">
+    <header class="bg-gray sticky-top" style="margin-top:-10px;">
         <div class="container pt-2">
             <div class="my-2 ml-auto">
                     <ul class="header-text d-flex flex-row list-unstyled justify-content-end">
-                        <li class=" px-2">&#128269;<span class="px-1">Search</span></li>
-                        <li class=" px-2">Login</li>
-                        <li class="">Covid-19 Info</li>
+                        <li class=" px-2">
+                            <a class="text-black-50" href="#">&#128269;<span class="px-1">Search</span></a>
+                        </li>
+                        <li class=" px-2"><a class="text-black-50" href="#">Login</a></li>
+                        <li class=""><a class="text-black-50" href="#">Covid-19 Info</a></li>
                     </ul>
             </div>
         </div>
@@ -70,19 +72,25 @@
             </div><!-- /.container -->
         </nav><!-- /#header -->
     </header>
-    <div class="hero " style = "position: relative; text-align: center;" >
-        <?php  if(get_field('hero_image')): ?> 
-                <img class="img-fluid w-100"  src="<?php  the_field('hero_image'); ?>" alt="Hero" />
-        <?php endif; ?>
-        <div class="text-white font-size" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-            <h1><?php  the_field('hero_text'); ?></h1>
-            <ul class="hero-text list-unstyled d-flex flex-row text-white">
-                <li><a href="#"><?php  the_field('who_we_are'); ?></a></li>
-                <li><a href="#"><?php  the_field('sustainable_design'); ?></a></li>
-                <li><a href="#"><?php  the_field('our_portfolio'); ?></a></li>
-            </ul>
-       </div>
-    </div>
+   
+    <?php 
+    if ( is_home() || is_front_page() ) :
+
+    ?>
+        <div class="hero " style = "position: relative; text-align: center;" >
+            <?php  if(get_field('hero_image')): ?> 
+                    <img class="img-fluid w-100"  src="<?php  the_field('hero_image'); ?>" alt="Hero" />
+            <?php endif; ?>
+            <div class="text-white font-size" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                <h1><?php  the_field('hero_text'); ?></h1>
+                <ul class="hero-text list-unstyled d-flex flex-row text-white">
+                    <li><a href="#"><?php  the_field('who_we_are'); ?></a></li>
+                    <li><a href="#"><?php  the_field('sustainable_design'); ?></a></li>
+                    <li><a href="#"><?php  the_field('our_portfolio'); ?></a></li>
+                </ul>
+        </div>
+        </div>
+    <?php endif ?>
     <main id="main" class="container"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
        
    
@@ -92,6 +100,8 @@
         ?>
             <div class="row">
                 <div class="col-md-8 col-sm-12">
+        
         <?php
             endif;
         ?>
+   
