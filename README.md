@@ -16,6 +16,13 @@ Run the **watch** script and start developing by editing the frontend SASS/JS as
 ```bash
 $ npm run watch
 ```
+ ## Screenshots
+The screenshots of the page 
 
+#### Mobile version
+![Mobile version](/images/1.png)
+
+#### Desktop version
+![Desktop version](/images/2.png)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
